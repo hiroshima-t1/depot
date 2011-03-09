@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
   end
   #END:login
   
-  # 'password' is a virtual attribute
+  # 'password'は仮想属性
   #START:accessors
   def password
     @password
@@ -51,7 +51,7 @@ class User < ActiveRecord::Base
   #START:after_destroy
   def after_destroy
     if User.count.zero?
-      raise "Can't delete last user"
+      raise "最後のユーザは削除できません"
     end
   end     
   #END:after_destroy
@@ -59,7 +59,7 @@ class User < ActiveRecord::Base
 private
 
   def password_non_blank
-    errors.add(:password, "Missing password") if hashed_password.blank?
+    errors.add(:password, "パスワードを入れてください") if hashed_password.blank?
   end
 #END:validate
   

@@ -4,47 +4,33 @@
   
   <% form_for :order, :url => { :action => :save_order } do |form| %>
     <fieldset>
-<!-- START_HIGHLIGHT -->
-      <legend><%= I18n.t 'checkout.legend' %></legend>
-<!-- END_HIGHLIGHT -->
+      <legend>あなたの詳細情報をご記入ください</legend>
 
       <div>
-<!-- START_HIGHLIGHT -->
-        <%= form.label :name, I18n.t('checkout.name') + ":" %>
-<!-- END_HIGHLIGHT -->
+        <%= form.label :name, "お名前:" %>
         <%= form.text_field :name, :size => 40 %>
       </div>
 
       <div>
-<!-- START_HIGHLIGHT -->
-        <%= form.label :address, I18n.t('checkout.address') + ":" %>
-<!-- END_HIGHLIGHT -->
+        <%= form.label :address, "ご住所:" %>
         <%= form.text_area :address, :rows => 3, :cols => 40 %>
       </div>
 
       <div>
-<!-- START_HIGHLIGHT -->
-        <%= form.label :email, I18n.t('checkout.email') + ":" %>
-<!-- END_HIGHLIGHT -->
+        <%= form.label :email, "Eメール:" %>
         <%= form.text_field :email, :size => 40 %>
       </div>
 
       <div>
-<!-- START_HIGHLIGHT -->
-        <%= form.label :pay_type, I18n.t('checkout.pay_type') + ":" %>
-<!-- END_HIGHLIGHT -->
+        <%= form.label :pay_type, "お支払い:" %>
         <%=
           form.select :pay_type,
                        Order::PAYMENT_TYPES, 
-# START_HIGHLIGHT
-                      :prompt => I18n.t('checkout.pay_prompt')
-# END_HIGHLIGHT
+                      :prompt => "お支払い方法を選択してください"
         %>
       </div>
     
-<!-- START_HIGHLIGHT -->
-      <%= submit_tag I18n.t('checkout.submit'), :class => "submit" %>
-<!-- END_HIGHLIGHT -->
+      <%= submit_tag "注文する", :class => "submit" %>
     </fieldset>
   <% end %>  
 </div>

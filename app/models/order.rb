@@ -12,10 +12,10 @@
 class Order < ActiveRecord::Base
   #END:has_many
   PAYMENT_TYPES = [
-    #  Displayed       stored in db
-    [ "Check",          "check" ],
-    [ "Credit card",    "cc" ],
-    [ "Purchase order", "po" ]
+    # 表示されるもの      DB内で格納されるもの
+    [ "現金",             "check" ],
+    [ "クレジットカード", "cc" ],
+    [ "注文書",           "po" ]
   ]
 
 #END:validate

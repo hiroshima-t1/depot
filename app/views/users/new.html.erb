@@ -4,7 +4,7 @@
   <%= f.error_messages %>
 
   <fieldset>
-  <legend>Enter User Details</legend>
+  <legend>ユーザの詳細情報入力</legend>
 
   <div>
     <%= f.label :name %>:
@@ -12,17 +12,17 @@
   </div>
 
   <div>
-    <%= f.label :user_password, 'Password' %>:
+    <%= f.label :user_password, 'パスワード' %>:
     <%= f.password_field :password, :size => 40 %>
   </div>
 
   <div>
-    <%= f.label :user_password_confirmation, 'Confirm' %>:
+    <%= f.label :user_password_confirmation, '確認' %>:
     <%= f.password_field :password_confirmation, :size => 40 %>
   </div>
 
   <div>
-    <%= f.submit "Add User", :class => "submit" %>
+    <%= f.submit "ユーザを追加する", :class => "submit" %>
   </div>
 
   </fieldset>

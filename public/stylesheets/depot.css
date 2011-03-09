@@ -1,4 +1,4 @@
-/* Global styles */
+/* 全体のスタイル */
 
 /* START:notice */
 #notice {
@@ -17,7 +17,7 @@ h1 {
         border-bottom: 3px dotted #77d;
 }
 
-/* Styles for products/index */
+/* products/indexのスタイル */
 
 #product-list table {
         border-collapse: collapse;
@@ -66,7 +66,7 @@ h1 {
 }
 
 /* START:mainlayout */
-/* Styles for main page */
+/* メインページのスタイル */
 
 #banner {
   background: #9c9;
@@ -108,7 +108,7 @@ h1 {
 }
 /* END:mainlayout */
 
-/* An entry in the store catalog */
+/* ストアカタログ内のエントリ */
 
 #store  .entry {
   overflow: auto;
@@ -159,7 +159,7 @@ h1 {
 /* END:inline */
 
 /* START:cartmain */
-/* Styles for the cart in the main page */
+/* メインページ内でのカートのスタイル */
 
 .cart-title {
   font: 120% bold;
@@ -176,7 +176,7 @@ h1 {
 /* END:cartmain */
 
 /* START:cartside */
-/* Styles for the cart in the sidebar */
+/* サイドバー内でのカートのスタイル */
 
 #cart, #cart table {
   font-size: smaller;
@@ -191,7 +191,7 @@ h1 {
 /* END:cartside */
 
 /* START:form */
-/* Styles for order form */
+/* 注文フォームのスタイル */
 
 .depot-form fieldset {
   background: #efe;
@@ -226,7 +226,7 @@ h1 {
 }
 /* END:form */
 
-/* The error box */
+/* エラーボックス */
 
 .fieldWithErrors {
   padding: 2px;
@@ -267,10 +267,3 @@ h1 {
   font-size: 12px;
   list-style: square;
 }
-
-/* START:i18n */
-.locale {
-        float:right;
-        padding-top: 0.2em
-}
-/* END:i18n */

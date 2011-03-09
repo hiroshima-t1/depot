@@ -1,4 +1,4 @@
-<h1>Editing order</h1>
+<h1>注文の編集</h1>
 
 <% form_for(@order) do |f| %>
   <%= f.error_messages %>
@@ -20,9 +20,9 @@
     <%= f.text_field :pay_type %>
   </p>
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit "更新" %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @order %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to '表示', @order %> |
+<%= link_to '戻る', orders_path %>

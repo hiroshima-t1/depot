@@ -52,7 +52,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        flash[:notice] = 'LineItem was successfully created.'
+        flash[:notice] = 'LineItemは正しく作成されました。'
         format.html { redirect_to(@line_item) }
         format.xml  { render :xml => @line_item, :status => :created, :location => @line_item }
       else
@@ -69,7 +69,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.update_attributes(params[:line_item])
-        flash[:notice] = 'LineItem was successfully updated.'
+        flash[:notice] = 'LineItemは正しく更新されました。'
         format.html { redirect_to(@line_item) }
         format.xml  { head :ok }
       else

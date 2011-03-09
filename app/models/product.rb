@@ -40,14 +40,13 @@ class Product < ActiveRecord::Base
 #START:val4
   validates_format_of :image_url,
                       :with    => %r{\.(gif|jpg|png)$}i,
-                      :message => 'must be a URL for GIF, JPG ' +
-                                  'or PNG image.'
+                      :message => 'はGIF、JPG、PNG画像のURLでなければなりません'
 #END:val4
 #START:val2a
 
 protected
   def price_must_be_at_least_a_cent
-    errors.add(:price, 'should be at least 0.01') if price.nil? ||
+    errors.add(:price, 'は最小でも0.01以上でなければなりません') if price.nil? ||
                        price < 0.01
   end
 #END:val2a

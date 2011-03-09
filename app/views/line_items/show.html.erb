@@ -1,23 +1,23 @@
 <p>
-  <b>Product:</b>
+  <b>商品:</b>
   <%=h @line_item.product_id %>
 </p>
 
 <p>
-  <b>Order:</b>
+  <b>注文:</b>
   <%=h @line_item.order_id %>
 </p>
 
 <p>
-  <b>Quantity:</b>
+  <b>数量:</b>
   <%=h @line_item.quantity %>
 </p>
 
 <p>
-  <b>Total price:</b>
+  <b>合計金額:</b>
   <%=h @line_item.total_price %>
 </p>
 
 
-<%= link_to 'Edit', edit_line_item_path(@line_item) %> |
-<%= link_to 'Back', line_items_path %>
+<%= link_to '編集', edit_line_item_path(@line_item) %> |
+<%= link_to '戻る', line_items_path %>

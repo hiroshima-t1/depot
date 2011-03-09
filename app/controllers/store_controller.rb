@@ -29,8 +29,8 @@ class StoreController < ApplicationController
         format.html {redirect_to_index}
       end
   rescue ActiveRecord::RecordNotFound
-    logger.error("Attempt to access invalid product #{params[:id]}")
-    redirect_to_index("Invalid product")
+    logger.error("無効な商品#{params[:id]}にアクセスしようとしました")
+    redirect_to_index("無効な商品です")
   end
   #END:add_to_cart
 
@@ -39,7 +39,7 @@ class StoreController < ApplicationController
   #START:checkout
   def checkout
     if @cart.items.empty?
-      redirect_to_index("Your cart is empty")
+      redirect_to_index("カートは現在空です")
     else
       @order = Order.new
     end
@@ -52,9 +52,7 @@ class StoreController < ApplicationController
     @order.add_line_items_from_cart(@cart)
     if @order.save
       session[:cart] = nil
-# START_HIGHLIGHT
-      redirect_to_index(I18n.t('flash.thanks'))
-# END_HIGHLIGHT
+      redirect_to_index("ご注文ありがとうございます")
     else
       render :action => 'checkout'
     end

@@ -1,23 +1,23 @@
 <p>
-  <b>Name:</b>
+  <b>名前:</b>
   <%=h @order.name %>
 </p>
 
 <p>
-  <b>Address:</b>
+  <b>住所:</b>
   <%=h @order.address %>
 </p>
 
 <p>
-  <b>Email:</b>
+  <b>Eメール:</b>
   <%=h @order.email %>
 </p>
 
 <p>
-  <b>Pay type:</b>
+  <b>支払い方法:</b>
   <%=h @order.pay_type %>
 </p>
 
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to '編集', edit_order_path(@order) %> |
+<%= link_to '戻る', orders_path %>

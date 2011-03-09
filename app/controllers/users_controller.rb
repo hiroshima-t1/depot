@@ -55,7 +55,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
 #START_HIGHLIGHT
-        flash[:notice] = "User #{@user.name} was successfully created."
+        flash[:notice] = "ユーザ#{@user.name}が作成されました"
         format.html { redirect_to(:action=>'index') }
 #END_HIGHLIGHT
         format.xml  { render :xml => @user, :status => :created,
@@ -76,7 +76,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.update_attributes(params[:user])
 #START_HIGHLIGHT
-        flash[:notice] = "User #{@user.name} was successfully updated."
+        flash[:notice] = "ユーザ#{@user.name}が更新されました"
         format.html { redirect_to(:action=>'index') }
 #END_HIGHLIGHT
         format.xml  { head :ok }
@@ -95,7 +95,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     #START_HIGHLIGHT
     begin
-      flash[:notice] = "User #{@user.name} deleted"
+      flash[:notice] = "ユーザ#{@user.name}は削除されました"
       @user.destroy
     rescue Exception => e
       flash[:notice] = e.message

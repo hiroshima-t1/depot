@@ -1,4 +1,4 @@
-<h1>Editing user</h1>
+<h1>ユーザの編集</h1>
 
 <% form_for(@user) do |f| %>
   <%= f.error_messages %>
@@ -16,9 +16,9 @@
     <%= f.text_field :salt %>
   </p>
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit "更新" %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<%= link_to '表示', @user %> |
+<%= link_to '戻る', users_path %>

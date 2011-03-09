@@ -8,8 +8,8 @@
 #---
 class AdminController < ApplicationController
 
-  # just display the form and wait for user to
-  # enter a name and password
+  # フォームを単に表示して
+  # ユーザが名前とパスワードを入力するのを待つ
   #START:login
   def login
     if request.post?
@@ -18,7 +18,7 @@ class AdminController < ApplicationController
         session[:user_id] = user.id
         redirect_to(:action => "index")
       else
-        flash.now[:notice] = "Invalid user/password combination"
+        flash.now[:notice] = "無効なユーザ／パスワードの組み合わせです"
       end
     end
   end
@@ -27,7 +27,7 @@ class AdminController < ApplicationController
   #START:logout
   def logout
     session[:user_id] = nil
-    flash[:notice] = "Logged out"
+    flash[:notice] = "ログアウト"
     redirect_to(:action => "login")
   end
   #END:logout

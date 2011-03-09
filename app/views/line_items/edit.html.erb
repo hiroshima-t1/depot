@@ -1,4 +1,4 @@
-<h1>Editing line_item</h1>
+<h1>line_itemの編集</h1>
 
 <% form_for(@line_item) do |f| %>
   <%= f.error_messages %>
@@ -20,9 +20,9 @@
     <%= f.text_field :total_price %>
   </p>
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit "更新" %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @line_item %> |
-<%= link_to 'Back', line_items_path %>
+<%= link_to '表示', @line_item %> |
+<%= link_to '戻る', line_items_path %>
